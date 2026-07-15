@@ -396,7 +396,7 @@ const BUILD_DATE = "2026-07-15";
 (function(){
   var ver = document.getElementById('ver');
   var btn = document.getElementById('dl');
-  var offline = (location.protocol === 'file:');
+  var offline = !(location.protocol === 'http:' || location.protocol === 'https:');
   if(offline){
     ver.textContent = "Offline copy · built " + BUILD_DATE;
     btn.textContent = "✓ Offline";
