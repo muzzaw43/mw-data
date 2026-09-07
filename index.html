@@ -287,6 +287,13 @@ const DATA = [
 {t:"Blitz",c:"Your Sets",d:"An alternative cost: cast it for the blitz cost and it gains haste plus 'when this creature dies, draw a card', but you sacrifice it at the beginning of the next end step."},
 {t:"Intimidate",c:"Your Sets",d:"This creature can't be blocked except by artifact creatures and/or creatures that share a color with it."},
 {t:"Plainscycling",c:"Your Sets",d:"A typecycling variant: pay the cost and discard this card to search your library for a Plains card and put it into your hand, then shuffle. (See also Forestcycling, Islandcycling, Mountaincycling.)"},
+// The Hobbit (Sep 2026)
+{t:"Storied",c:"Your Sets",d:"(The Hobbit.) A check, not an ability: if you control three or more artifacts, legendaries and/or Sagas, you gain an enduring story for the REST OF THE GAME. Once it switches on it never turns off, even if your board is wiped — so hitting the threshold once is permanent."},
+{t:"Enduring story",c:"Your Sets",d:"(The Hobbit.) The permanent game state that Storied unlocks. Cards read 'as long as you have an enduring story' and grant ongoing bonuses — ward on your team, +1/+1 to creatures, free equips, a Propaganda-style attack tax. It's a designated player state, not a permanent, so it can't be removed."},
+{t:"Gift a [thing]",c:"Your Sets",d:"As you cast the spell you may promise an opponent a gift — a card, a Treasure, a tapped Fish, etc. If you do, they receive it BEFORE the spell's other effects, and the spell usually gets substantially better in return. Choosing to gift is optional and locked in at cast time."},
+{t:"Equip [quality]",c:"Your Sets",d:"A cheaper equip cost restricted to a creature type — e.g. Bilbo's Ring can equip a Halfling for {1} or any creature for {4}. Both costs are on the card; you choose which to pay. Still sorcery speed."},
+// Secrets of Strixhaven
+{t:"Prepared / Prepare",c:"Your Sets",d:"(Secrets of Strixhaven.) These cards are a creature on the front with a spell on the back. The creature enters prepared, or becomes prepared from a trigger. While it IS prepared you may cast a COPY of its spell — the creature stays on the battlefield and the card never leaves; casting the copy just unprepares it. Because triggers can re-prepare the same creature, one card can fire its spell repeatedly. Only creatures that have a prepare spell can become prepared, so outside effects that grant 'prepared' only work on them."},
 // Non-evergreen keywords
 {t:"Cycling",c:"Keywords",d:"Pay the cycling cost and discard this card to draw a card. Lets a \"dead\" card become a fresh draw."},
 {t:"Convoke",c:"Keywords",d:"You can tap untapped creatures to help pay for this spell (each pays 1 generic or one mana of its color)."},
@@ -427,7 +434,7 @@ function render(){
 }
 
 // ---- offline download + version ----
-const BUILD_DATE = "2026-08-21";
+const BUILD_DATE = "2026-09-07";
 (function(){
   var ver = document.getElementById('ver');
   var btn = document.getElementById('dl');
