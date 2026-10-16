@@ -1,5 +1,5 @@
 # Cards to report on in every update summary (one per line)
-Reality Fracture
+Academic Ascent
 Talisman of Progress
 Annul
 Dark Ritual
