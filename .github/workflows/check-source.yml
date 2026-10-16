@@ -35,6 +35,17 @@ jobs:
           except Exception as e:
               print("no FRA.json:", e)
           PY
+            echo '## FRA cards vs AtomicCards'
+            python3 - <<'PY'
+          import json, gzip
+          fra = json.load(open("fra.json"))["data"]["cards"]
+          atomic = json.load(gzip.open("a.gz"))["data"]
+          names = sorted({c["name"] for c in fra})
+          missing = [n for n in names if n not in atomic]
+          print("FRA unique names:", len(names), "| in AtomicCards:", len(names)-len(missing), "| missing:", len(missing))
+          print("missing sample:", missing[:30])
+          print("FRA first sample:", names[:5])
+          PY
             echo '## Scryfall'
             curl -sS -A "mw-data-updater" -H "Accept: application/json" "https://api.scryfall.com/cards/named?fuzzy=reality+fracture" | python3 -c "import sys,json; j=json.load(sys.stdin); print({k:j.get(k) for k in ('object','name','set','set_name','released_at','type_line','oracle_text','details')})"
           } > staging/SOURCE_CHECK.md 2>&1
