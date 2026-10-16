@@ -7,47 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Look for Reality Fracture in MTGJSON and Scryfall
+      - name: Run the update decision script
         run: |
           mkdir -p staging
-          {
-            echo "# Source check"
-            echo '## MTGJSON Meta'
-            curl -sS -A "mw-data-updater" https://mtgjson.com/api/v5/Meta.json; echo
-            curl -sS -A "mw-data-updater" https://mtgjson.com/api/v5/AtomicCards.json.gz -o a.gz
-            python3 - <<'PY'
-          import gzip, json
-          d = json.load(gzip.open("a.gz"))["data"]
-          print("MTGJSON atomic cards:", len(d))
-          print("MTGJSON match:", [k for k in d if "reality fracture" in k.lower()])
+          { echo "# needs_update check ($(date -u +%A))"; python needs_update.py; python - <<'PY'
+          import json, urllib.request
+          req = urllib.request.Request("https://mtgjson.com/api/v5/SetList.json", headers={"User-Agent": "mw-data-updater"})
+          sets = json.load(urllib.request.urlopen(req))["data"]
+          print("set types:", sorted({s.get("type") for s in sets}))
+          print("latest sets:", [(s["code"], s["releaseDate"], s.get("type")) for s in sorted(sets, key=lambda x: x["releaseDate"])[-6:]])
           PY
-            echo '## Scryfall set fra'
-            curl -sS -A "mw-data-updater" -H "Accept: application/json" "https://api.scryfall.com/sets/fra" | python3 -c "import sys,json; j=json.load(sys.stdin); print({k:j.get(k) for k in ('name','code','released_at','card_count','set_type','details')})"
-            curl -sS -A "mw-data-updater" -H "Accept: application/json" -G "https://api.scryfall.com/cards/search" --data-urlencode "q=set:fra name:fracture" | python3 -c "import sys,json; j=json.load(sys.stdin); print(j.get('total_cards'), [(c['name'],c['set'],c.get('oracle_text')) for c in j.get('data',[])], j.get('details'))"
-            echo '## MTGJSON FRA.json'
-            curl -sS -A "mw-data-updater" -o fra.json -w "%{http_code}\n" https://mtgjson.com/api/v5/FRA.json
-            python3 - <<'PY'
-          import json
-          try:
-              d = json.load(open("fra.json"))["data"]
-              print(d.get("name"), d.get("releaseDate"), len(d["cards"]))
-              print([c["name"] for c in d["cards"] if "fracture" in c["name"].lower()])
-          except Exception as e:
-              print("no FRA.json:", e)
-          PY
-            echo '## FRA cards vs AtomicCards'
-            python3 - <<'PY'
-          import json, gzip
-          fra = json.load(open("fra.json"))["data"]["cards"]
-          atomic = json.load(gzip.open("a.gz"))["data"]
-          names = sorted({c["name"] for c in fra})
-          missing = [n for n in names if n not in atomic]
-          print("FRA unique names:", len(names), "| in AtomicCards:", len(names)-len(missing), "| missing:", len(missing))
-          print("missing sample:", missing[:30])
-          print("FRA first sample:", names[:5])
-          PY
-            echo '## Scryfall'
-            curl -sS -A "mw-data-updater" -H "Accept: application/json" "https://api.scryfall.com/cards/named?fuzzy=reality+fracture" | python3 -c "import sys,json; j=json.load(sys.stdin); print({k:j.get(k) for k in ('object','name','set','set_name','released_at','type_line','oracle_text','details')})"
           } > staging/SOURCE_CHECK.md 2>&1
           git config user.name github-actions; git config user.email actions@github.com
           git add staging/SOURCE_CHECK.md; git commit -m "Source check result"; git push

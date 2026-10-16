@@ -1,10 +1,13 @@
 name: Update card database
 
-# Weekly: build a fresh mtg_cards_slim.json from MTGJSON into staging/ (the live file is NOT touched).
-# Manual: run with "publish" ticked to copy the staged file over the live one.
+# Scheduled (daily 03:17 UTC): rebuild the live mtg_cards_slim.json straight from MTGJSON when
+#   - it is Monday (weekly run), or
+#   - a set released in the last 45 days still has cards missing from the live file (new set not fully registered).
+#   Scheduled builds are sanity-checked and only published if they pass; nothing is committed if nothing changed.
+# Manual: run without "publish" to stage a file in staging/ (live file untouched); with "publish" ticked to copy the staged file over the live one.
 on:
   schedule:
-    - cron: "17 3 * * 1"   # Mondays 03:17 UTC
+    - cron: "17 3 * * *"
   workflow_dispatch:
     inputs:
       publish:
@@ -28,6 +31,36 @@ jobs:
       - name: Self-test the builder
         run: python test_build_slim.py mtg_cards_slim.json
 
+      - name: Scheduled run - is an update needed?
+        id: need
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          r="$(python needs_update.py)"
+          echo "$r"
+          echo "answer=${r%% *}" >> "$GITHUB_OUTPUT"
+          echo "Update check: $r" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Scheduled run - build and publish live
+        if: ${{ github.event_name == 'schedule' && steps.need.outputs.answer == 'yes' }}
+        run: |
+          python build_slim.py --out new_slim.json --summary staging/SUMMARY.md
+          python - <<'PY'
+          import json
+          old = json.load(open("mtg_cards_slim.json", encoding="utf-8"))
+          new = json.load(open("new_slim.json", encoding="utf-8"))
+          removed = set(old) - set(new)
+          # Guard: the "A-" Arena cards are expected to disappear; anything else disappearing in bulk is suspicious.
+          other = [r for r in removed if not r.startswith("A-")]
+          assert len(other) < 50, f"{len(other)} non-Alchemy cards would be removed, not publishing: {other[:10]}"
+          PY
+          mv new_slim.json mtg_cards_slim.json
+          rm -f staging/mtg_cards_slim.json
+          git config user.name "card-db-updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add mtg_cards_slim.json staging
+          git commit -m "Auto-update card database ($(date -u +%F))" || echo "no changes"
+          git push
+
       - name: Publish the staged file
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish }}
         run: |
@@ -46,11 +79,11 @@ jobs:
           git push
 
       - name: Build a new staged file
-        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.publish) }}
+        if: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
         run: python build_slim.py --out staging/mtg_cards_slim.json --summary staging/SUMMARY.md
 
       - name: Commit the staged file and summary
-        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.publish) }}
+        if: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
         run: |
           git config user.name "card-db-updater"
           git config user.email "actions@users.noreply.github.com"
