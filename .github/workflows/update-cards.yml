@@ -1,0 +1,63 @@
+name: Update card database
+
+# Weekly: build a fresh mtg_cards_slim.json from MTGJSON into staging/ (the live file is NOT touched).
+# Manual: run with "publish" ticked to copy the staged file over the live one.
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # Mondays 03:17 UTC
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Copy the staged file (staging/mtg_cards_slim.json) over the live mtg_cards_slim.json"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Self-test the builder
+        run: python test_build_slim.py mtg_cards_slim.json
+
+      - name: Publish the staged file
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish }}
+        run: |
+          test -f staging/mtg_cards_slim.json || { echo "Nothing staged yet - run without 'publish' first."; exit 1; }
+          python - <<'PY'
+          import json
+          n = json.load(open("staging/mtg_cards_slim.json", encoding="utf-8"))
+          assert len(n) > 30000 and "Sol Ring" in n, "staged file looks wrong"
+          PY
+          cp staging/mtg_cards_slim.json mtg_cards_slim.json
+          rm -f staging/mtg_cards_slim.json
+          git config user.name "card-db-updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add mtg_cards_slim.json staging
+          git commit -m "Publish staged card database ($(date -u +%F))" || echo "no changes"
+          git push
+
+      - name: Build a new staged file
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.publish) }}
+        run: python build_slim.py --out staging/mtg_cards_slim.json --summary staging/SUMMARY.md
+
+      - name: Commit the staged file and summary
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.publish) }}
+        run: |
+          git config user.name "card-db-updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add staging
+          git commit -m "Stage card database update ($(date -u +%F))" || echo "no changes"
+          git push
+
+      - name: Show the summary
+        if: always()
+        run: cat staging/SUMMARY.md >> "$GITHUB_STEP_SUMMARY" || true

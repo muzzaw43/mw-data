@@ -1,0 +1,7 @@
+# Cards to report on in every update summary (one per line)
+Reality Fracture
+Talisman of Progress
+Annul
+Dark Ritual
+Siege-Gang Commander
+Pick Your Poison
