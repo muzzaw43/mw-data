@@ -1,0 +1,19 @@
+name: Check card sources
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Look for Reality Fracture in MTGJSON and Scryfall
+        run: |
+          set -x
+          curl -sS -A "mw-data-updater" https://mtgjson.com/api/v5/Meta.json; echo
+          curl -sS -A "mw-data-updater" https://mtgjson.com/api/v5/AtomicCards.json.gz -o a.gz
+          python3 - <<'PY'
+          import gzip, json
+          d = json.load(gzip.open("a.gz"))["data"]
+          print("MTGJSON atomic cards:", len(d))
+          print("MTGJSON match:", [k for k in d if "reality fracture" in k.lower()])
+          PY
+          echo "--- Scryfall named lookup"
+          curl -sS -A "mw-data-updater" -H "Accept: application/json" "https://api.scryfall.com/cards/named?fuzzy=reality+fracture" | python3 -c "import sys,json; j=json.load(sys.stdin); print({k:j.get(k) for k in ('object','name','set','set_name','released_at','type_line','oracle_text','details')})"
