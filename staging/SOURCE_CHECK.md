@@ -10,5 +10,9 @@ None [] Your query didn’t match any cards. Adjust your search terms or refer t
 200
 Reality Fracture 2026-10-02 491
 []
+## FRA cards vs AtomicCards
+FRA unique names: 285 | in AtomicCards: 285 | missing: 0
+missing sample: []
+FRA first sample: ['Academic Ascent', 'Aerid Konstrari', 'Afterthought Sentry', 'Ajani Resolute', 'Ajani Unrelenting']
 ## Scryfall
 {'object': 'error', 'name': None, 'set': None, 'set_name': None, 'released_at': None, 'type_line': None, 'oracle_text': None, 'details': 'No cards found matching “reality fracture”'}
