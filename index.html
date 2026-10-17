@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#151310">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <title>MTG Glossary</title>
 <style>
   :root{
@@ -41,6 +45,7 @@
   }
   #dl:active{background:var(--panel);}
   #dl:disabled{opacity:.6;}
+  #dl[hidden]{display:none;}
   #ver{font-size:.68rem; color:var(--ink-dim); text-align:center; padding-top:4px;}
   #ver a{color:var(--brass-dim);}
   .searchwrap{position:relative;}
@@ -125,7 +130,7 @@
 <header>
   <div class="titlebar">
     <h1><span class="tap">↷</span>MTG GLOSSARY</h1>
-    <button id="dl" title="Save a copy to this device for offline use">⬇ Offline</button>
+    <button id="dl" title="Install this app on your device" hidden>⬇ Install</button>
   </div>
   <div class="searchwrap">
     <input id="q" type="search" placeholder="Search a term… e.g. ward, trample" autocomplete="off" autofocus>
@@ -222,6 +227,12 @@ function render(){
   }).join('');
 }
 
+
+if('serviceWorker' in navigator && location.protocol.startsWith('http')) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+let deferred=null; const dl=document.getElementById('dl');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;dl.hidden=false;});
+dl.onclick=async()=>{if(!deferred)return;deferred.prompt();try{await deferred.userChoice;}catch(_){}deferred=null;dl.hidden=true;};
+window.addEventListener('appinstalled',()=>{dl.hidden=true;});
 q.addEventListener('input',render);
 clearBtn.onclick=()=>{q.value='';render();q.focus();};
 render();
