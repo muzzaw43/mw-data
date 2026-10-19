@@ -1,14 +1,14 @@
 # Card database update (staged, not live yet)
 
-Source: MTGJSON AtomicCards, build 2026-10-15 (version 5.3.0+20261015).
-Cards in new file: **35122** (live file has 35022)
-Added: **317**, removed: **217**
-Flagged not Commander-legal: **2940** (live file: 3364)
-Legality changes: 266 now legal, 3 now not legal
-Rules text changed on 159 existing cards
+Source: MTGJSON AtomicCards, build 2026-10-18 (version 5.3.0+20261018).
+Cards in new file: **35124** (live file has 35122)
+Added: **2**, removed: **0**
+Flagged not Commander-legal: **2942** (live file: 2940)
+Legality changes: 0 now legal, 0 now not legal
+Rules text changed on 13 existing cards
 
 ## Watch list
-- Reality Fracture: NOT in new file; not in live file
+- Academic Ascent: in new file; already in live file
 - Talisman of Progress: in new file; already in live file
 - Annul: in new file; already in live file
 - Dark Ritual: in new file; already in live file
@@ -16,219 +16,26 @@ Rules text changed on 159 existing cards
 - Pick Your Poison: in new file; already in live file
 
 ## Added (first 80)
-- Academic Ascent
-- Aerid Konstrari
-- Afterthought Sentry
-- Ajani's Anguish
-- Apex Witchstalker
-- Arcane Amphisbaena
-- Archive Arbiter
-- Arni, Humble Scribe
-- Arni, Renowned Champion
-- Artifist Acumen
-- Asymmetry Sage
-- Auspicious Aquarium
-- Avacyn, Angel of Horror
-- Avatar of Burgeoning Echoes
-- Avoided Stairwurm
-- Awaken the Inferno
-- Banescale Serpent
-- Bend Mortal Limits
-- Bestial Incursion
-- Blessed Ghoul
-- Bloombrute
-- Blossom-Blessed Angel // Seed Suture
-- Bobby, Another Dwarf
-- Boisterous Clique
-- Break Under Pressure
-- Budding Insurgent
-- CGI Fight Sequence
-- Campus Crier
-- Carnivorous Cultivator // Enroot
-- Chandra's Emberling
-- Change the Narrative
-- Clash of Elements
-- Codie, Ravenous Codex
-- Command the Stage
-- Countersculpt
-- Craftwork Crusher
-- Cruel Calculations
-- Crux of the Theory
-- Cryotheory Adept
-- Curse-Marred Demon
-- Dack Fayden, Helping Hand
-- Danitha, Spear of Agony
-- Danitha, Sword of Hope
-- Dark Matter Manipulator
-- Darklight Phoenix
-- Dedicated Commons
-- Denzilore Fatehold
-- Desperate Futurescribe
-- Diabolic Formula
-- Dina, Flesh Sower
-- Diviner of Victory // Unwind History
-- Divining Duelist
-- Draconic Visitor
-- Eardrum Rattler
-- Echogoyfs
-- Edgar, Ancient Bloodlord
-- Edgar, Moonlit Sovereign
-- Emergency Phytomedic // Seed Suture
-- Emerin, Shivan Angel
-- Emrakul, the Exigent Doom
-- Enter the Eternities
-- Entrust the Spark
-- Essence Burn
-- Etali, Primal Garden
-- Everyone's an Impostor
-- Extended Absence
-- Extrapolate the Impossible
-- Eye of Jace
-- Face Yourself
-- Fatehold Annex
-- Fatehold Charm
-- Fatehold Chronologist // Peer Review
-- Fateshaper Aspirant
-- Fblthp, Impossibly Lost
-- Fblthp, Knows the Way
-- Ferocity of the Hunt
-- Flickering Hound
-- Flourishing Forces
-- Flourishing Grapple
-- Formidable Commons
+- Beta Ray Bill
+- Doctor Strange, Master of Magic
 
 ## Removed (first 40)
-- A-Acererak the Archlich
-- A-Akki Ronin
-- A-Alrund, God of the Cosmos // A-Hakka, Whispering Raven
-- A-Ancestral Katana
-- A-Ardent Dustspeaker
-- A-Armory Veteran
-- A-Asari Captain
-- A-Baleful Beholder
-- A-Base Camp
-- A-Binding Geist // A-Spectral Binding
-- A-Blessed Hippogriff // A-Tyr's Blessing
-- A-Blood Artist
-- A-Bretagard Stronghold
-- A-Briar Hydra
-- A-Brine Comber // A-Brinebound Gift
-- A-Bruenor Battlehammer
-- A-Buy Your Silence
-- A-Cabaretti Charm
-- A-Canopy Tactician
-- A-Capenna Express
-- A-Carnelian Orb of Dragonkind
-- A-Case the Joint
-- A-Cauldron Familiar
-- A-Celebrity Fencer
-- A-Celestial Regulator
-- A-Circle of the Land Druid
-- A-Circuit Mender
-- A-Civil Servant
-- A-Cloister Gargoyle
-- A-Cobbled Lancer
-- A-Cori-Steel Cutter
-- A-Cosmos Charger
-- A-Cosmos Elixir
-- A-Dawnbringer Cleric
-- A-Deal Gone Bad
-- A-Death-Priest of Myrkul
-- A-Demilich
-- A-Demon's Due
-- A-Devoted Grafkeeper // A-Departed Soulkeeper
-- A-Dokuchi Silencer
 
 ## Now legal (first 60)
-- Abduction
-- Abeyance
-- Addle
-- Aeolipile
-- Air Elemental
-- Ajani Resolute
-- Ajani Unrelenting
-- Akroma's Vengeance
-- An-Zerrin Ruins
-- Animate Wall
-- Annul
-- Apocalypse Chime
-- Aquamoeba
-- Arrogant Wurm
-- Aspect of Wolf
-- Attunement
-- Aura Fracture
-- Autumn Willow
-- Avalanche Riders
-- Black Knight
-- Blastoderm
-- Bloodline Recollector // Ancestral Craving
-- Bog Wraith
-- Boil
-- Cabal Therapy
-- Camouflage
-- Careful Study
-- Carrion Beetles
-- Cast Away Doubt
-- Castle
-- Centaur Garden
-- Chandra, Chill of Compliance
-- Chaoslace
-- Charge the Sanctum
-- Circle of Protection: Blue
-- Circular Logic
-- City of Brass
-- Cloud Elemental
-- Cloudchaser Eagle
-- Cockatrice
-- Compel Brutality
-- Consecrate Land
-- Craterclaw Colossus
-- Creature Bond
-- Crumbling Sanctuary
-- Cunning Wish
-- Cursed Scroll
-- Cursed Totem
-- Cyclopean Tomb
-- Dark Ritual
-- Darksteel Angel
-- Deathlace
-- Decree of Justice
-- Dingus Egg
-- Dissipate
-- Divine Offering
-- Dread of Night
-- Dwarven Miner
-- Dwarven Thaumaturgist
-- Earthbind
 
 ## Now NOT legal (first 60)
-- Fast // Furious
-- Red Herring
-- Unquenchable Fury
 
 ## Rules text changed (first 25)
-- Accident-Prone Apprentice // Amphibian Accident
-- Adrix and Nev, Twincasters // Adrix and Nev, Twincasters
-- Aesi, Tyrant of Gyre Strait // Aesi, Tyrant of Gyre Strait
-- Aether Searcher
-- Agent of Raffine
-- Ajani Goldmane // Ajani Goldmane
-- Akroma, Angel of Fury
-- Albiorix, Goose Tyrant // Wild Goose Chase
-- Ambition's Cost
-- Angelic Sleuth
-- Anje Falkenrath // Anje Falkenrath
-- Anointed Procession // Anointed Procession
-- Arek, False Goldwarden
-- Arena of Glory
-- Arni Brokenbrow
-- Artist Alley
 - B.F.M. (Big Furry Monster)
-- Bind to Secrecy
-- Birds of Paradise // Birds of Paradise
-- Blightsteel Colossus // Blightsteel Colossus
-- Blood Crypt // Blood Crypt
-- Brine Hag
-- Chandra Nalaar // Chandra Nalaar
-- Charmed Pendant
-- Chulane, Teller of Tales // Chulane, Teller of Tales
+- Everythingamajig
+- Fast // Furious
+- Garbage Elemental
+- Ineffable Blessing
+- Joven and Chandler
+- Knight of the Kitchen Sink
+- Red Herring
+- Scavenger Hunt
+- Sly Spy
+- The Superlatorium
+- Trivia Contest
+- Very Cryptic Command
