@@ -1,11 +1,11 @@
 # Card database update (staged, not live yet)
 
-Source: MTGJSON AtomicCards, build 2026-10-25 (version 5.3.0+20261025).
-Cards in new file: **35254** (live file has 35124)
-Added: **130**, removed: **0**
-Flagged not Commander-legal: **3072** (live file: 2942)
+Source: MTGJSON AtomicCards, build 2026-11-01 (version 5.3.0+20261101).
+Cards in new file: **35479** (live file has 35254)
+Added: **227**, removed: **2**
+Flagged not Commander-legal: **3297** (live file: 3072)
 Legality changes: 0 now legal, 0 now not legal
-Rules text changed on 17 existing cards
+Rules text changed on 16 existing cards
 
 ## Watch list
 - Academic Ascent: in new file; already in live file
@@ -16,108 +16,109 @@ Rules text changed on 17 existing cards
 - Pick Your Poison: in new file; already in live file
 
 ## Added (first 80)
-- "Coastal Ren Faire"
-- "Tinkerer (Not the Urza's Saga-er one)"
-- Adversary by Algorithm
-- All Good Things...
-- Andoria
-- Antagonist Incorporator
-- Bajor
-- Blastoneuron
-- Borg Cube
-- Captain Benjamin Sisko
-- Captain Jean-Luc Picard
-- Captain Jonathan Archer
-- Captain Michael Burnham
-- Captain Pike, Fullness of Time
-- Cardassia Prime
-- Cetacean Ops
-- Cleveland Booker, Empath
-- Command Chair
-- Command Subadjunct
-- Commander Spock
-- Conquest Mission
-- Constable Odo
-- D'Ghor Bloodletter
-- D'Vana Tendi, Optimistic Ensign
-- D-7 Battle Cruiser
-- Dahar Master
-- Dal R'El, Augment Orphan
-- Daniels, Temporal Agent
-- Data, New Life
-- Death Is Irrelevant
-- Deep Space 9
-- Deep Space Scan
-- Dr. Joseph M'Benga
-- Dr. McCoy, Surly Surgeon
-- Earth, Sector 001
-- Elim Garak, Simple Tailor
-- Energize
-- Ensign Pavel Chekov
-- Excalbian Gamemaster
-- Exploratory Mission
-- Federation Outpost
-- Ferenginar
-- Georgiou, Terran Emperor
-- Gowron, Eager for Battle
-- Gray and Adira, Forever Joined
-- Guinan, Ancient Advisor
-- Hemmer, Fixing What Is Broken
-- Hit It!
-- Hologram Stalker
-- Impossible Choice
-- Interstellar Effigy
-- Jake Sisko, War Correspondent
-- Jean-Luc Picard, Luminary
-- Join the Collective
-- Khan, Vengeful Heart
-- Kira Nerys, Firebrand
-- Kirk, Commanding Officer
-- Kobayashi Maru Scenario
-- Koloth, Tribble Hunter
-- L'Rell, Fierce Visionary
-- Lieutenant Commander Data
-- Live Long and Prosper
-- Locutus of Borg
-- Locutus, the One Who Speaks
-- Lore, Positronic Provocateur
-- Lt. Cmdr. Geordi La Forge
-- Miles O'Brien, Transporter Ops
-- Mirror Universe Intrusion
-- Mr. Spock, Science Officer
-- Nyota Uhura, Communications
-- Obsidian Order Operative
-- Orion
-- Peace in Our Time
-- Pet Sehlat
-- Phlox, Unorthodox Doctor
-- Primary Unimatrix Adjunct
-- Pure Energy
-- Q, Stacking the Deck
-- Qo'noS
-- Quark's Bar
+- Academy Instructor
+- Alexander, Ship's Fool
+- Amanda Grayson, Logic's Link
+- Ambassador K'Ehleyr
+- Ambulatory Reactor
+- Andromedan Automatons
+- Anthropological Mission
+- Armus, Skin of Evil
+- Artificial Anomaly
+- Assembly Specialist
+- Assimilate the Wounded
+- Assimilation Assessor
+- Astute Terraformer
+- B'Elanna Torres, Scrapper
+- Balance of Terror
+- Battle of Wolf 359
+- Beverly Crusher, Ship's Doctor
+- Blood-Sport Champion
+- Boarding Action
+- Borg Incursion
+- Borg Scout Sphere
+- Branching Timeline
+- Brazen Bluff
+- Captain Janeway, Endgame
+- Chancellor Gorkon
+- Chekov and McCoy
+- Chief Kyle, Transporter Tech
+- Chief Miles O'Brien
+- Chief Montgomery Scott
+- Class-4 Tactical Cube
+- Class-F Shuttlecraft
+- Cloak and Phaser
+- Cmdr. Troi, Outgoing Empath
+- Co-Option Adjutant
+- Collation Trimatrix
+- Collective Override
+- Colossal Clone Master
+- Combadge
+- Commander Raffi Musiker
+- Commander William Riker
+- Culber and Stamets, Star-Crossed
+- Curzon Dax, Bound by Blood
+- Data, Exploring Humanity
+- Data, Professor of Humanities
+- Dathon, His Heart Open
+- David and Carol Marcus, Creators
+- De-evolve
+- Deanna Troi, Psychic Counsel
+- Deliver from Chaos
+- Dominion Assault Force
+- Dominion Infiltration
+- Dr. Leonard "Bones" McCoy
+- Dr. Pulaski, Cynical Clinician
+- Emergency Holographic Crew
+- Emergency Regeneration
+- Encounter the Unknown
+- Ensign Harry Kim, Operations
+- Enterprise NX-01
+- Erica Ortegas, Plucky Pilot
+- Extraction Integrant
+- Ezri Dax, Newly Joined
+- Federation Resupply
+- Ferocious Colonist
+- Final Frontier
+- Fleet Captain Christopher Pike
+- Fugitive Listener
+- Gabriel Lorca, Mirror Menace
+- Gagh Slinger
+- Galvanizing Tenor
+- Gaseous Anomaly
+- Genesis Device
+- Genesis Effect
+- Geordi La Forge, Innovator
+- Ghost of Illyria
+- Giant Space Amoeba
+- Gift of Perfection
+- Glory to the Empire!
+- Gnarling Targ
+- Grand Nagus Zek
+- Grilka, Widowed Warrior
 
 ## Removed (first 40)
+- "Coastal Ren Faire"
+- "Tinkerer (Not the Urza's Saga-er one)"
 
 ## Now legal (first 60)
 
 ## Now NOT legal (first 60)
 
 ## Rules text changed (first 25)
+- Artist Alley
 - B.F.M. (Big Furry Monster)
-- Beta Ray Bill
+- Celestial Vault
+- Enter the Eternities
 - Everythingamajig
-- Fast // Furious
 - Garbage Elemental
+- Hit It!
 - Ineffable Blessing
+- Joven and Chandler
 - Knight of the Kitchen Sink
-- Nashi, Illusion Gadgeteer
 - No Way Out
-- Pick Your Poison
-- Red Herring
 - Scavenger Hunt
 - Sly Spy
 - The Superlatorium
 - Trivia Contest
-- Unquenchable Fury
 - Very Cryptic Command
