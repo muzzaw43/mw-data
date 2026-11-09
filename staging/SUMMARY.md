@@ -1,11 +1,11 @@
 # Card database update (staged, not live yet)
 
-Source: MTGJSON AtomicCards, build 2026-11-01 (version 5.3.0+20261101).
-Cards in new file: **35479** (live file has 35254)
-Added: **227**, removed: **2**
-Flagged not Commander-legal: **3297** (live file: 3072)
-Legality changes: 0 now legal, 0 now not legal
-Rules text changed on 16 existing cards
+Source: MTGJSON AtomicCards, build 2026-11-08 (version 5.3.0+20261108).
+Cards in new file: **35488** (live file has 35479)
+Added: **9**, removed: **0**
+Flagged not Commander-legal: **3238** (live file: 3297)
+Legality changes: 59 now legal, 0 now not legal
+Rules text changed on 15 existing cards
 
 ## Watch list
 - Academic Ascent: in new file; already in live file
@@ -16,109 +16,94 @@ Rules text changed on 16 existing cards
 - Pick Your Poison: in new file; already in live file
 
 ## Added (first 80)
-- Academy Instructor
-- Alexander, Ship's Fool
-- Amanda Grayson, Logic's Link
-- Ambassador K'Ehleyr
-- Ambulatory Reactor
-- Andromedan Automatons
-- Anthropological Mission
-- Armus, Skin of Evil
-- Artificial Anomaly
-- Assembly Specialist
-- Assimilate the Wounded
-- Assimilation Assessor
-- Astute Terraformer
-- B'Elanna Torres, Scrapper
-- Balance of Terror
-- Battle of Wolf 359
-- Beverly Crusher, Ship's Doctor
-- Blood-Sport Champion
-- Boarding Action
-- Borg Incursion
-- Borg Scout Sphere
-- Branching Timeline
-- Brazen Bluff
-- Captain Janeway, Endgame
-- Chancellor Gorkon
-- Chekov and McCoy
-- Chief Kyle, Transporter Tech
-- Chief Miles O'Brien
-- Chief Montgomery Scott
-- Class-4 Tactical Cube
-- Class-F Shuttlecraft
-- Cloak and Phaser
-- Cmdr. Troi, Outgoing Empath
-- Co-Option Adjutant
-- Collation Trimatrix
-- Collective Override
-- Colossal Clone Master
-- Combadge
-- Commander Raffi Musiker
-- Commander William Riker
-- Culber and Stamets, Star-Crossed
-- Curzon Dax, Bound by Blood
-- Data, Exploring Humanity
-- Data, Professor of Humanities
-- Dathon, His Heart Open
-- David and Carol Marcus, Creators
-- De-evolve
-- Deanna Troi, Psychic Counsel
-- Deliver from Chaos
-- Dominion Assault Force
-- Dominion Infiltration
-- Dr. Leonard "Bones" McCoy
-- Dr. Pulaski, Cynical Clinician
-- Emergency Holographic Crew
-- Emergency Regeneration
-- Encounter the Unknown
-- Ensign Harry Kim, Operations
-- Enterprise NX-01
-- Erica Ortegas, Plucky Pilot
-- Extraction Integrant
-- Ezri Dax, Newly Joined
-- Federation Resupply
-- Ferocious Colonist
-- Final Frontier
-- Fleet Captain Christopher Pike
-- Fugitive Listener
-- Gabriel Lorca, Mirror Menace
-- Gagh Slinger
-- Galvanizing Tenor
-- Gaseous Anomaly
-- Genesis Device
-- Genesis Effect
-- Geordi La Forge, Innovator
-- Ghost of Illyria
-- Giant Space Amoeba
-- Gift of Perfection
-- Glory to the Empire!
-- Gnarling Targ
-- Grand Nagus Zek
-- Grilka, Widowed Warrior
+- Conjurer's Closet // Conjurer's Closet
+- Demand Answers // Demand Answers
+- Eerie Interlude // Eerie Interlude
+- Essence Flux // Essence Flux
+- Momentary Blink // Momentary Blink
+- Relentless Assault // Relentless Assault
+- Seething Song // Seething Song
+- War's Toll // War's Toll
+- Warstorm Surge // Warstorm Surge
 
 ## Removed (first 40)
-- "Coastal Ren Faire"
-- "Tinkerer (Not the Urza's Saga-er one)"
 
 ## Now legal (first 60)
+- Arzakon
+- Ashaya's Enduring Bond
+- Autumn Willow, Harmony
+- Balefang the Unslayable
+- Blor the Impervious
+- Boss Uramon, Shadow's Reach
+- Chief Magistrate of Mercadia
+- Chira, All In
+- Davvol, Evincar of Rath
+- Dragon's Smile
+- Dyfed, the Guiding Hand
+- Ekthi, Contaminator Priest
+- Elda, Conjurer of Spectacle
+- Feroz, Ulgrotha's Warden
+- Flitwing, Lyev Detective
+- Glava, Five-Advents Mage
+- Grakk the Pacifist
+- Grandmother Goby
+- Greensleeves
+- Grizzlegom, Hurloon Hero
+- Gustha Ebbasdotter
+- Homer, the Hermit
+- Istvan, Butcher of Eln
+- Itazura, Lingering Wick
+- Jabs, Mistress of Mockery
+- Jandor, Fortuned Traveler
+- Kuroki, Thief of Talents
+- Lyna, Veil of Vengeance
+- Massimo, the Magician
+- Matoc, Lavamancer
+- Maular, the Next Evolution
+- Meatsqueak, Hoard Lord
+- Miss Highwater
+- Nephilim Epochal
+- Nivea, Beloved Battlemage
+- Olag and Miau, New Friends
+- Olinda the Oblivious
+- Rikala, Homarid King
+- Sahir, Visitor in Darkness
+- Sash and Waistcoat, Unmen
+- Selenia, the Cursed Heart
+- Seluma, Light of Aysen
+- Sifa Grent
+- The Everforger
+- The Madcap Jester
+- The Muckslinger Gang
+- The Unluckiest Planeswalker
+- The Weaver King
+- Thomil, the Destroyer
+- Tolabow, Loch Rascal
+- Tresserhorn's Lord, Returned
+- Tsagan, Raider Warlord
+- Uugguu, the Omniplasm
+- Valko Indorian
+- Venser, Visionary Traveler
+- Whtz, the Bibliophile
+- Worzel, the Protector
+- Yume, Chronicler of Valor
+- Zagorka, Mother of Sanctum
 
 ## Now NOT legal (first 60)
 
 ## Rules text changed (first 25)
-- Artist Alley
-- B.F.M. (Big Furry Monster)
-- Celestial Vault
-- Enter the Eternities
+- Bloomvine Regent // Claim Territory // Bloomvine Regent // Claim Territory
 - Everythingamajig
+- Fast // Furious
 - Garbage Elemental
-- Hit It!
 - Ineffable Blessing
-- Joven and Chandler
+- Jett Reno, Problem Solver
 - Knight of the Kitchen Sink
-- No Way Out
+- Marang River Regent // Coil and Catch // Marang River Regent // Coil and Catch
 - Scavenger Hunt
+- Scavenger Regent // Exude Toxin // Scavenger Regent // Exude Toxin
 - Sly Spy
 - The Superlatorium
 - Trivia Contest
 - Very Cryptic Command
+- Werewolf Pack Leader
