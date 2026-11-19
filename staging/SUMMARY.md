@@ -1,11 +1,11 @@
 # Card database update (staged, not live yet)
 
-Source: MTGJSON AtomicCards, build 2026-11-15 (version 5.3.0+20261115).
-Cards in new file: **35495** (live file has 35488)
-Added: **7**, removed: **0**
-Flagged not Commander-legal: **2778** (live file: 3238)
-Legality changes: 467 now legal, 0 now not legal
-Rules text changed on 6 existing cards
+Source: MTGJSON AtomicCards, build 2026-11-18 (version 5.3.0+20261118).
+Cards in new file: **35547** (live file has 35495)
+Added: **52**, removed: **0**
+Flagged not Commander-legal: **2830** (live file: 2778)
+Legality changes: 0 now legal, 0 now not legal
+Rules text changed on 0 existing cards
 
 ## Watch list
 - Academic Ascent: in new file; already in live file
@@ -16,84 +16,63 @@ Rules text changed on 6 existing cards
 - Pick Your Poison: in new file; already in live file
 
 ## Added (first 80)
-- Abyssal Lotus
-- Calmwater Mentor
-- Goramou the Coral-Taken
-- Ring of Unity
-- Salinae, the Ocean Mother
-- Shimmering Citadel
-- Tecton, Malignant Ruin
+- "The Ignoble Serpent"
+- "Zekes, Acid Rock Fan"
+- Alena, Frontline Rush
+- Alesha, Who Makes History
+- Ashiok, Genderfear
+- Chandra, Pride of Avishkar
+- Critter, Behind the Camera
+- Felothar, Rights and Wrongs 13
+- Gigi Wellplayed
+- Halana, Covering Fire
+- Ham Sandwich
+- Huatli, Inventor's Inspiration
+- King Kynaios of Meletis
+- King Tiro of Meletis
+- Ms. Bumbleflower, No Longer Kind
+- Niko, Spark of Victory
+- Nissa, Pride of Zendikar
+- Proud Parent
+- Raccoon
+- Ral, Smitten with Order
+- Red Smothering Tithe
+- Rocco, Snack Supplier
+- Saheeli, Poet's Muse
+- Segante, Doing Crimes
+- Shroomsday, Feast Spoiler
+- Strixhaven Film Student // Cut
+- The Alien Spellslayer
+- The Bird Pool
+- The Charitable Kids
+- The Countess of Counterspells
+- The Gaming Explainer
+- The King of Grixis
+- The Kinnan Hirer
+- The Lorwyn Lizard
+- The Mystery Booster
+- The No Mana Bard
+- The Queen of Wolves
+- The Radioactive Gravymaker
+- The Rhystic Friends
+- The Roaming Guild Pack
+- The Sabertooth Wizard
+- The Sayer of Don't
+- The Stylish Spellslayer
+- The Tale of Jimothy
+- The Urza Finder
+- The Wonderous Architect
+- Throw Shade
+- Tomik, Devoted to Chaos
+- Xantcha, Contains Multitudes
+- Yahenni, Slayer
+- Yuma, Plant Parent
+- Zinnia, Born for the Stage
 
 ## Removed (first 40)
 
 ## Now legal (first 60)
-- 70,000 Light-Years from Home
-- A Good Day to Die
-- Academy Instructor
-- Adversary by Algorithm
-- Alexander, Ship's Fool
-- All Good Things...
-- Amanda Grayson, Logic's Link
-- Ambassador K'Ehleyr
-- Ambulatory Reactor
-- Amok Time
-- Andoria
-- Andromedan Automatons
-- Antagonist Incorporator
-- Anthropological Mission
-- Armus, Skin of Evil
-- Artificial Anomaly
-- Assault Drone
-- Assembly Specialist
-- Assimilate the Wounded
-- Assimilation Assessor
-- Astute Terraformer
-- Automated Warfare System
-- B'Elanna Torres, Scrapper
-- Badgey, Malicious Glitch
-- Bajor
-- Balance of Terror
-- Bat'leth
-- Battle of Wolf 359
-- Battle-Scarred Survivalist
-- Beckett Mariner, Impetuous Ensign
-- Benjamin Sisko, Besieged
-- Beverly Crusher, Ship's Doctor
-- Bio-Asset Allocator
-- Blastoneuron
-- Blood-Sport Champion
-- Boarding Action
-- Borg Cube
-- Borg Incursion
-- Borg Queen, Perfection Manifest
-- Borg Scout Sphere
-- Brad Boimler, Eager Ensign
-- Branching Timeline
-- Brazen Bluff
-- Cantankerous Captain
-- Captain Benjamin Sisko
-- Captain James T. Kirk
-- Captain Janeway, Endgame
-- Captain Jean-Luc Picard
-- Captain Jonathan Archer
-- Captain Kathryn Janeway
-- Captain Kirk, Boldly Going
-- Captain Michael Burnham
-- Captain Pike, Fullness of Time
-- Captain's Tutelage
-- Cardassia Prime
-- Cetacean Ops
-- Ceti Eel
-- Cha'DIch Investigator
-- Chancellor Gorkon
-- Chekov and McCoy
 
 ## Now NOT legal (first 60)
 
 ## Rules text changed (first 25)
-- Face Yourself
-- Hit It!
-- Mirror Universe Intrusion
-- Slagwurm Armor
-- Storied Veteran
-- Temporal Conqueror
